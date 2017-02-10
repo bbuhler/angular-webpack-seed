@@ -1,10 +1,10 @@
 h1
 {
-    color: yellow;
-    background: red;
+  color: yellow;
+  background: red;
 
-    @supports(position: sticky)
-    {
-        background: blue;
-    }
+  @supports (position: sticky)
+  {
+    background: blue;
+  }
 }

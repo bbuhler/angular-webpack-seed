@@ -8,25 +8,25 @@ var helpers = require('./helpers');
 var commonConfig = require('./webpack.common.js');
 
 module.exports = webpackMerge(commonConfig, {
-    devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-eval-source-map',
 
-    output: {
-        path: helpers.root('dist'),
-        publicPath: 'http://localhost:8080/',
-        filename: '[name].js',
-        chunkFilename: '[id].chunk.js'
-    },
+  output: {
+    path: helpers.root('dist'),
+    publicPath: 'http://localhost:8080/',
+    filename: '[name].js',
+    chunkFilename: '[id].chunk.js'
+  },
 
-    plugins: [
-        new ExtractTextPlugin('[name].css'),
+  plugins: [
+    new ExtractTextPlugin('[name].css'),
 
-        new webpack.optimize.CommonsChunkPlugin({
-            name: ['app', 'vendor', 'polyfills']
-        }),
-    ],
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['app', 'vendor', 'polyfills']
+    }),
+  ],
 
-    devServer: {
-        historyApiFallback: true,
-        stats: 'minimal'
-    }
+  devServer: {
+    historyApiFallback: true,
+    stats: 'minimal'
+  }
 });
