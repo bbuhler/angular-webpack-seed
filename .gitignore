@@ -63,6 +63,7 @@ dll/
 # IDE #
 .idea/
 *.swp
+*.iml
 
 
 # Angular #
