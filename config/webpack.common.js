@@ -44,8 +44,18 @@ module.exports = {
       {
         test: /\.(scss|sass)$/,
         include: helpers.root('src', 'app'),
-        //use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'postcss-loader', 'sass-loader']})
-        use: ['raw-loader', 'postcss-loader', 'sass-loader']
+        use: [
+          'raw-loader',
+          'postcss-loader',
+          'sass-loader',
+          {
+            loader: 'prepend-loader',
+            query:
+            {
+              data: `@import "${ helpers.root('src/assets/styles/themes/cupido') }";`
+            }
+          }
+        ]
       }
     ]
   },

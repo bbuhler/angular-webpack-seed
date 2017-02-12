@@ -39,6 +39,7 @@
     "node-sass": "^4.5.0",
     "open-browser-webpack-plugin": "0.0.3",
     "postcss-loader": "^1.2.2",
+    "prepend-loader": "0.0.2",
     "raw-loader": "^0.5.1",
     "reflect-metadata": "^0.1.9",
     "rimraf": "^2.5.4",
